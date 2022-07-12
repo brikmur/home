@@ -1,16 +1,27 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
 .body {
 	/*display: block;
 	padding: 0;*/
-	margin:0 !important;
-	width: 1448px;
+	/*margin:0 !important;
+	width: 1448px;*/
 	background-color:#fff;
-	height: 1200px;
+	/*height: 1200px;*/
 }
 
 .header {
 	width: 100%;
 	height: 85px;
 	background-color: #fff;
+}
+
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 .header__body {
@@ -232,8 +243,12 @@
 }
 
 
-.content__post {
-	/*flex: 0 0 20px;*/
+.content__post1 {
+	display: flex;
+}
+
+.content__post2 {
+	display: flex;
 }
 
 .item-about {
@@ -264,6 +279,13 @@
 	justify-content: flex-end;
 }
 
+.body__top{
+	display: flex;
+	margin-left: 1255px;
+	/*justify-content: space-between;
+	justify-content: flex-end;*/
+}
+
 .fa-angle-up {
 	font-family: 'Font Awesome';
 	font-size: 16px;
@@ -273,11 +295,109 @@
 	margin: 0px 5px 0px 0px;
 }
 
-.footer__top {
+.top {
 	font-family: Oswald;
 	font-size: 14px;
 	line-height: 16px;
 	font-weight: 300;
 	color: #282828;
 	margin: 0px 180px 55px 0px;
+}
+
+/*Responsive*/
+
+@media screen and (max-width: 1200px) {
+	.container {
+		width: 970px;
+	}
+	.header__body{
+		width: auto;
+	}
+	.top__titile{
+		margin: 33px 320px 0px -1px;
+	}
+	.menu__body{
+		width: auto;
+	}
+	.content{
+		height: auto;
+	}
+	.content__recent-news{
+		flex-direction: column;
+	}
+	.post1__post{
+		height: 200px;
+		margin-left: 110px;
+	}
+	.post2__post{
+		height: 200px;
+		margin-left: 110px;
+	}
+	.body__top{
+		margin-left: 900px;
+
+	}
+	
+}
+
+@media screen and (max-width: 992px) {
+	.container {
+		width: 750px;
+	}
+	.top__titile{
+		margin: 33px 100px 0px -1px;
+	}
+	.content__body{
+		width: auto;
+	}
+	.content__headline-h2{
+		width: auto;
+	}
+	.post1__post{
+		margin-left: 50px;
+	}
+	.post2__post{
+		margin-left: 50px;
+	}
+	.body__top{
+		margin-left: 700px;
+	}
+	
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		max-width: none;
+	}
+	.top__titile{
+		margin: 33px 100px 0px -1px;
+	}
+	.top__btn{
+		width: 130px;
+	}
+	.menu__body{
+		width: auto;
+	}
+	.elem__item{
+		margin: 0px 8px 0px 0px;
+	}
+	.menu__elem{
+		margin-left: -30px;
+	}
+	.menu__search{
+		margin-left: 45px;
+		width: 200px;
+	}
+	.content__headline-h1{
+		width: auto;
+	}
+	.post1__post{
+		margin-left: 0px;
+	}
+	.post2__post{
+		margin-left: 0px;
+	}
+	.body__top{
+		margin-left: 500px;
+	}
 }
